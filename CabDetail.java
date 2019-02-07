@@ -1,13 +1,30 @@
-package com.ample.util;
+package com.ample;
 
 import java.util.Date;
 
-public class Driver {
-	private long id;
-	public long getId() {
-		return id;
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement(name="CabDetail")
+public class CabDetail {
+	private int id;
+	private int   peopleincabnow;
+	private String  drivername;
+	private String	mobilenumber;
+	private String  vechiletype;
+	private String  vechilenumber;
+	private int   maxseatincab;
+	private String  source;
+	private String destination;
+	private Date starttime;
+	private String latitude;
+	private String  longitude;
+	private String  location;
+    private String password;
+
+	public int getId() {
+	return id;
 	}
-	public void setId(long id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 	public String getDrivername() {
@@ -33,12 +50,6 @@ public class Driver {
 	}
 	public void setVechilenumber(String vechilenumber) {
 		this.vechilenumber = vechilenumber;
-	}
-	public int getPeopleincabnow() {
-		return peopleincabnow;
-	}
-	public void setPeopleincabnow(int peopleincabnow) {
-		this.peopleincabnow = peopleincabnow;
 	}
 	public int getMaxseatincab() {
 		return maxseatincab;
@@ -82,24 +93,22 @@ public class Driver {
 	public void setLocation(String location) {
 		this.location = location;
 	}
-	public String getPassword() {
-		return password;
+	
+	public int getPeopleincabnow() {
+		return peopleincabnow;
 	}
-	public void setPassword(String password) {
-		this.password = password;
+	public void setPeopleincabnow(int peopleincabnow) {
+		this.peopleincabnow = peopleincabnow;
 	}
-	private String  drivername;
-	private String mobilenumber;
-	private String vechiletype;
-	private String vechilenumber;
-	private int   peopleincabnow;
-	private int   maxseatincab;
-	private String   source;
-	private String   destination;
-	private Date  starttime;
-	private String  latitude;
-	private String longitude;
-	private String location;
-	private String password;
-	  
+		public String getPassword() {
+			return password;
+		}
+		public void setPassword(String password) {
+			this.password = password;
+		}
+		
+		/*@Override
+		public String toString(){
+			return getSource()+"----------->"+getDestination();
+		}*/
 }
